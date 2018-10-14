@@ -22,7 +22,7 @@ const ignorePug = [
 ];
 
 lazyRequireTask('pug', './tasks/pug', {
-    src: ['src/pug/index.pug', ...ignorePug],
+    src: ['src/pug/**/*.pug', ...ignorePug],
     dst: 'public'
 });
 

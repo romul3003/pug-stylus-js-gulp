@@ -18,7 +18,7 @@ module.exports = function(options) {
                         sprite:     'sprite.svg', // filename for sprite relative to dest
                         layout:     'vertical',
                         prefix:     '$svg-', // .svg-
-                        dimensions: true,
+                        // dimensions: true,
                         render:     {
                             styl: {
                                 dest: 'sprite.styl'  // filename for .styl relative to dest^
