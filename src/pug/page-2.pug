@@ -1,0 +1,10 @@
+extends layouts/main
+
+block append params
+    - var pageTitle = "Страница-2"
+
+block append main
+    h1.title Hello world!
+
+    +b-pageLink('index.html', 'Переход главную страницу')
+
