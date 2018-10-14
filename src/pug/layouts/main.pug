@@ -1,0 +1,19 @@
+extends root
+
+append params
+    - var pageTitle = "Главная"
+
+block meta
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+block styles
+    link(rel='stylesheet' href='styles/index.css')
+
+block main
+    block content
+        h1.title Вспоминаем pug и делаем свою сборку gulp 4
+
+block scripts
+    script(src='js/libs.min.js')
+    script(src='js/index.js')

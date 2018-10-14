@@ -1,0 +1,16 @@
+include bemto/bemto
+
+include ../blocks/all
+
+block params
+    - var pageTitle = "My Gulp"
+
+doctype html
+html
+    head
+        title= pageTitle
+        block meta
+        block styles
+    body.page
+        block main
+        block scripts
