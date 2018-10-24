@@ -39,7 +39,7 @@ lazyRequireTask('scripts:lib', './tasks/scripts-lib', {
 });
 
 lazyRequireTask('scripts', './tasks/scripts', {
-    src: 'src/js/*.js',
+    src: 'src/js/**/*.js',
     dst: 'public/js/',
     rename: 'index.js'
 });
@@ -66,7 +66,7 @@ lazyRequireTask('assets:svg', './tasks/assets-svg', {
 gulp.task('watch', function() {
     gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
     gulp.watch(['src/styles/**/*.styl', 'tmp/styles/sprite.styl'], gulp.series('styles'));
-    gulp.watch('src/js/**/*.js', gulp.series(['scripts:lib', 'scripts']));
+    gulp.watch('src/js/**/*.js', gulp.series('scripts'));
     gulp.watch('src/styles/**/*.{png, jpg}', gulp.series('assets:img'));
     gulp.watch('src/styles/**/*.svg', gulp.series('assets:svg'));
 });
