@@ -4,7 +4,7 @@
 
 -
   var get_bemto_tag_type = function(tagName) {
-    var result = 'block'
+    var result = 'elem'
     if (bemto_tag_metadata[tagName]) {
       result = bemto_tag_metadata[tagName].type || result;
     }
@@ -12,7 +12,7 @@
   }
 
   var get_bemto_tag_content_type = function(tagName) {
-    var result = 'block'
+    var result = 'elem'
     if (bemto_tag_metadata[tagName]) {
       result = bemto_tag_metadata[tagName].content_type || bemto_tag_metadata[tagName].type || result;
     }

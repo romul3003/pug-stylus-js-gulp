@@ -32,7 +32,7 @@ mixin bemto_tag(tag, tagMetadata)
       - newTag = 'label'
     if attributes.type
       //- TODO: Add more checks for different type value patterns
-      - newTag = block ? 'button' : 'input'
+      - newTag = elem ? 'button' : 'input'
     else if attributes.src
       - newTag = 'img'
 
@@ -78,7 +78,7 @@ mixin bemto_tag(tag, tagMetadata)
     <!DOCTYPE html>
 
   +bemto_custom_tag(newTag, tagMetadata)&attributes(attributes)
-    if block
+    if elem
       block
 
   //- Closing all the wrapper tails

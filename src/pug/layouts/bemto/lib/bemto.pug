@@ -157,7 +157,7 @@ mixin b(options)
     else
       - attributes.class = undefined
 
-  if block
+  if elem
     +bemto_tag(tag, tagMetadata)&attributes(attributes)
       block
   else
